@@ -8,13 +8,13 @@ import { FaLinkedinIn } from "react-icons/fa";
 const Footor = () => {
   return (
     <>
-      <div className='grid grid-cols-1 text-center md:grid-cols-2 bg-black md:h-24 relative '>
-        <div>
-          <p className='text-white font-normal text-base p-7 ml-28 italic'>This site is made by 💖 by <span className='text-orange-500 underline'><Link href={'https://inflection.org.in/'}>InflectionOrg</Link></span></p>
-        </div>
-        <div>
-          <div className='flex justify-end absolute inset-0 mt-6 md:gap-4 p-5'>
-            <p className='text-white text-base'>Follow us</p>
+      <div className=' bg-black '>
+        <div className='max-w-7xl container mx-auto px-4 py-20 md:py-0 flex flex-col items-center text-center md:flex-row md:justify-between md:h-20'>
+          <div>
+            <p className='text-white font-normal text-base italic'>This site is made by 💖 by <span className='text-orange-500 underline'><Link href={'https://inflection.org.in/'}>InflectionOrg</Link></span></p>
+          </div>
+          <div className='flex justify-end gap-2 p-2'>
+            <p className='text-white text-lg'>Follow us</p>
             <GrFacebookOption size={26} className='cursor-pointer text-orange-400' />
             <AiOutlineTwitter size={26} className='cursor-pointer text-orange-400' />
             <FaLinkedinIn size={26} className='cursor-pointer text-orange-400' />
@@ -22,6 +22,8 @@ const Footor = () => {
           </div>
         </div>
       </div>
+
+
     </>
   )
 }
