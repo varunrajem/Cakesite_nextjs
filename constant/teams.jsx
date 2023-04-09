@@ -1,7 +1,7 @@
-import chief1 from '../public/team001.jpg'
-import chief2 from '../public/team002.jpg'
-import chief3 from '../public/team003.jpg'
-import chief4 from '../public/team004.jpg'
+import chief1 from '../public/Images/Teams/team001.jpg'
+import chief2 from '../public/Images/Teams/team002.jpg'
+import chief3 from '../public/Images/Teams/team003.jpg'
+import chief4 from '../public/Images/Teams/team004.jpg'
 
 export const Cheifdata = [
   {

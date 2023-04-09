@@ -1,9 +1,9 @@
-import ourmenu1 from '../public/ourmenu-1.jpg'
-import ourmenu2 from '../public/ourmenu-2.jpg'
-import ourmenu3 from '../public/ourmenu-3.jpg'
-import ourmenu4 from '../public/ourmenu-4.jpg'
-import ourmenu5 from '../public/ourmenu-5.jpg'
-import ourmenu6 from '../public/ourmenu-6.jpg'
+import ourmenu1 from '../public/Images/MenuCake/ourmenu-1.jpg'
+import ourmenu2 from '../public/Images/MenuCake/ourmenu-2.jpg'
+import ourmenu3 from '../public/Images/MenuCake/ourmenu-3.jpg'
+import ourmenu4 from '../public/Images/MenuCake/ourmenu-4.jpg'
+import ourmenu5 from '../public/Images/MenuCake/ourmenu-5.jpg'
+import ourmenu6 from '../public/Images/MenuCake/ourmenu-6.jpg'
 
 
 export const Data = [
