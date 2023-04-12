@@ -1,10 +1,10 @@
 import React from 'react'
 import Hero from '../components/Hero'
 import CupcakeCard from '../components/CupcakeCard'
-import cake1 from '../public/cakes1.jpg'
-import cake2 from '../public/cakes2.jpg'
-import cake3 from '../public/cakes3.jpg'
-import cake4 from '../public/cakes4.jpg'
+import cake1 from '../public/Images/Cake/cakes1.jpg'
+import cake2 from '../public/Images/Cake/cakes2.jpg'
+import cake3 from '../public/Images/Cake/cakes3.jpg'
+import cake4 from '../public/Images/Cake/cakes4.jpg'
 import { RiCakeLine } from "react-icons/ri";
 import { Data } from '../constant/index'
 import Image from 'next/image'
@@ -68,7 +68,7 @@ const index = () => {
           return (<>
             <div key={i} className='grid grid-cols-1 md:grid-cols-2'>
               <div className=''>
-                <Image src={e.cakeimg} alt='...' className='h-auto w-auto' />
+                <Image src={e.cakeimg} alt='...' className='' />
               </div>
               <div className='px-4'>
                 <p className='text-lg font-medium uppercase '>{e.title}</p>
@@ -82,10 +82,15 @@ const index = () => {
       </div>
 
       <div className=''>
-        <div className='text-center bg-gray-200 w-full h-96'>
-          <p className=''>Making your Hot cake in<br /> May is perfect. </p>
+        <div className='bg-gray-300 h-96'>
+          <p className='text-center font-bold text-5xl'>Making your Christmas cake in <br />
+            December is perfect.</p>
+          <div className='flex justify-center items-center p-4'>
+            <button className='text-white bg-yellow-500 hover:bg-orange-500 px-10 uppercase font-bold py-4 rounded-full'>CHECK MENU</button>
+          </div>
         </div>
       </div>
+
 
 
       {/*********** * TEAMS ****************/}
@@ -110,7 +115,6 @@ const index = () => {
           )
         })
       }
-
       </div>
     </>
   )
