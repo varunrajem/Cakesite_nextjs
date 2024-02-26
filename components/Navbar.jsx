@@ -9,7 +9,7 @@ import { useRouter } from 'next/router';
 
 const Navbar = () => {
   const router = useRouter()
-  console.log(router.asPath)
+  // console.log(router.asPath)
   const [isopen, setisOpen] = useState(false)
 
 
@@ -54,7 +54,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className='flex justify-center items-center h-[130px] bg-pink-300 sticky top-0 z-30'>
+      <div className='flex justify-between sm:justify-center items-center h-[120px] bg-pink-300 sticky top-0 z-30 px-3'>
         <div className='md:flex justify-between gap-5 hidden px-5'>
           {Llink.map((link, i) => {
             return <Link key={i} href={link.path} className={router.asPath === link.path ? 'font-bold text-md text-orange-500' : 'text-lg text-white'}>{link.name}</Link>
@@ -75,12 +75,12 @@ const Navbar = () => {
           {isopen ? <AiOutlineClose /> : <AiOutlineMenu />}
         </div>
         {isopen &&
-          <div onClick={() => setisOpen(!isopen)} className='absolute top-[144px] bg-black/75 left-0 w-full h-screen z-10'>
+          <div onClick={() => setisOpen(!isopen)} className='absolute top-[120px] bg-black/75 left-0 w-full h-screen z-10'>
           </div>
         }
         {isopen ?
-          <div className='absolute top-[144px] left-0 w-2/3 h-screen z-20'>
-            <ul className='bg-blue-100 shadow-xl h-full'>
+          <div className='absolute top-[120px] left-0 w-2/3 h-screen z-20'>
+            <ul className='bg-pink-100 shadow-xl h-full'>
               {Llink.map((e, i) => {
                 return (
                   <div key={i} className='flex justify-start items-center px-3 py-1 gap-3'>
