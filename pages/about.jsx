@@ -28,25 +28,26 @@ const about = () => {
 
       <div className='grid grid-cols-1 md:grid-cols-2 p-4 md:p-28  '>
         <Image src={ourstory} alt='..' className='' />
-      </div>
 
-      <div className='p-4 md:p-20 space-y-8'>
-        <div>
-          <p className='font-bold font-lg'>OUR MISSION</p>
-          <p>Lorem lipsum Dolor nunc vule putateulr ips dol consec.Donec semp ertet laciniate ultricie upien disse comete dolo lectus fgilla itollicil tua ludin dolor.</p>
-          <Image src={icons1} alt='' className='mt-2' />
-        </div>
 
-        <div>
-          <p className='font-bold font-lg'>OUR VISION</p>
-          <p>Lorem lipsum Dolor nunc vule putateulr ips dol consec.Donec semp ertet laciniate ultricie upien disse comete dolo lectus fgilla itollicil tua ludin dolor.</p>
-          <Image src={icons2} alt='' className='mt-2' />
-        </div>
+        <div className='p-4 md:px-14 space-y-8'>
+          <div>
+            <p className='font-bold font-lg'>OUR MISSION</p>
+            <p>Lorem lipsum Dolor nunc vule putateulr ips dol consec.Donec semp ertet laciniate ultricie upien disse comete dolo lectus fgilla itollicil tua ludin dolor.</p>
+            <Image src={icons1} alt='' className='mt-2' />
+          </div>
 
-        <div>
-          <p className='font-bold font-lg'>WHAT WE DO</p>
-          <p>Lorem lipsum Dolor nunc vule putateulr ips dol consec.Donec semp ertet laciniate ultricie upien disse comete dolo lectus fgilla itollicil tua ludin dolor.</p>
-          <Image src={icons3} alt='' className='mt-2' />
+          <div>
+            <p className='font-bold font-lg'>OUR VISION</p>
+            <p>Lorem lipsum Dolor nunc vule putateulr ips dol consec.Donec semp ertet laciniate ultricie upien disse comete dolo lectus fgilla itollicil tua ludin dolor.</p>
+            <Image src={icons2} alt='' className='mt-2' />
+          </div>
+
+          <div>
+            <p className='font-bold font-lg'>WHAT WE DO</p>
+            <p>Lorem lipsum Dolor nunc vule putateulr ips dol consec.Donec semp ertet laciniate ultricie upien disse comete dolo lectus fgilla itollicil tua ludin dolor.</p>
+            <Image src={icons3} alt='' className='mt-2' />
+          </div>
         </div>
       </div>
     </>

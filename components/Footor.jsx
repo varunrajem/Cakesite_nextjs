@@ -8,7 +8,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 const Footor = () => {
   return (
     <>
-      <div className=' bg-black '>
+      <div className=' bg-black'>
         <div className='max-w-7xl container mx-auto px-4 py-20 md:py-0 flex flex-col items-center text-center md:flex-row md:justify-between md:h-20'>
           <div>
             <p className='text-white font-normal text-base italic'>This site is made by 💖 by <span className='text-orange-500 underline'><Link href={'https://varunraje.vercel.app/'}>Varunraje</Link></span></p>

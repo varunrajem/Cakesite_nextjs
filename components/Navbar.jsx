@@ -5,6 +5,14 @@ import { useState } from 'react'
 import logo from '../public/logo.png'
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { useRouter } from 'next/router';
+import { IoMdHome } from "react-icons/io";
+import { CiSquareQuestion } from "react-icons/ci";
+import { MdOutlineRoomService } from "react-icons/md";
+import { CiMenuBurger } from "react-icons/ci";
+import { IoFastFoodOutline } from "react-icons/io5";
+import { CiShop } from "react-icons/ci";
+import { RiGalleryFill } from "react-icons/ri";
+import { MdOutlineContactSupport } from "react-icons/md";
 
 
 const Navbar = () => {
@@ -52,6 +60,51 @@ const Navbar = () => {
 
   ]
 
+  const alllinks = [
+    {
+      name: 'Home',
+      path: '/',
+      icon: <IoMdHome />
+    },
+    {
+      name: 'About Us',
+      path: '/about',
+      icon: <CiSquareQuestion />
+
+    },
+    {
+      name: 'Our Services',
+      path: '/service',
+      icon: <MdOutlineRoomService />
+    },
+    {
+      name: 'Menu',
+      path: '/menu',
+      icon: <CiMenuBurger />
+    },
+    {
+      name: 'Recipes',
+      path: '/recipe',
+      icon: <IoFastFoodOutline />
+    },
+    {
+      name: 'Shop',
+      path: '/shop',
+      icon: <CiShop />
+    },
+    {
+      name: 'Gallery',
+      path: '/gallery',
+      icon: <RiGalleryFill />
+    },
+    {
+      name: 'Contact',
+      path: '/contact',
+      icon: <MdOutlineContactSupport />
+    },
+
+  ]
+
   return (
     <>
       <div className='flex justify-between sm:justify-center items-center h-[120px] bg-pink-300 sticky top-0 z-30 px-3'>
@@ -81,10 +134,11 @@ const Navbar = () => {
         {isopen ?
           <div className='absolute top-[120px] left-0 w-2/3 h-screen z-20'>
             <ul className='bg-pink-100 shadow-xl h-full'>
-              {Llink.map((e, i) => {
+              {alllinks.map((e, i) => {
                 return (
-                  <div key={i} className='flex justify-start items-center px-3 py-1 gap-3'>
-                    <li><a onClick={() => setisOpen(!isopen)}>{e.name}</a></li>
+                  <div key={i} className='flex justify-start items-center px-4 py-1 gap-3'>
+                    <span>{e.icon}</span>
+                    <li><Link href={e.path} onClick={() => setisOpen(!isopen)} className={router.asPath === e.path ? 'font-bold text-lg text-blue-500' : 'text-lg'}>{e.name}</Link></li>
                   </div>
                 )
               })}
