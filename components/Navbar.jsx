@@ -114,7 +114,7 @@ const Navbar = () => {
           })}
         </div>
         <div className='flex justify-start'>
-          <Image src={logo} alt="logo" className="h-20 w-44 object-contain" />
+          <Link href={'/'}><Image src={logo} alt="logo" className="h-20 w-44 object-contain" /></Link>
         </div>
         <div className='md:flex justify-between gap-5 hidden px-5'>
           {rlink.map((link, i) => {
