@@ -13,7 +13,7 @@ const menu = () => {
       </div>
       <div className='grid grid-cols-1 md:grid-cols-2 p-2 md:px-56 py-10 md:py-20 gap-7'>{
         data.map((e, i) => {
-          return (<>
+          return (
             <div key={i} className='grid grid-cols-1 md:grid-cols-2 w-full py-5'>
               <div>
                 <Image src={e.cakeimg} alt='pic' />
@@ -24,7 +24,7 @@ const menu = () => {
                 <button className='text-white hover:text-black bg-yellow-500 hover:bg-orange-500 px-8 uppercase font-bold py-3 rounded-full mt-6'>Order Now</button>
               </div>
             </div>
-          </>)
+          )
         })
       }
       </div>

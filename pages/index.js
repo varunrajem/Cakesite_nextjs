@@ -67,18 +67,17 @@ const index = () => {
       <div className='grid grid-cols-1 md:grid-cols-2 px-8 md:px-56 py-20 gap-7 '>{
         data.map((e, i) => {
           return (
-            <>
-              <div key={i} className='grid grid-cols-1 md:grid-cols-2 w-full p-3'>
-                <div className='w-full'>
-                  <Image src={e.cakeimg} alt='pic' className='object-contain' />
-                </div>
-                <div className='px-4'>
-                  <p className='text-lg font-medium uppercase '>{e.title}</p>
-                  <p className='text-md mt-2'>{e.desc}</p>
-                  <button className='text-white hover:text-black bg-yellow-500 hover:bg-orange-500 px-8 uppercase font-bold py-3 rounded-full mt-4'>Order Now</button>
-                </div>
+            <div key={i} className='grid grid-cols-1 md:grid-cols-2 w-full p-3'>
+              <div className='w-full'>
+                <Image src={e.cakeimg} alt='pic' className='object-contain' />
               </div>
-            </>)
+              <div className='px-4'>
+                <p className='text-lg font-medium uppercase '>{e.title}</p>
+                <p className='text-md mt-2'>{e.desc}</p>
+                <button className='text-white hover:text-black bg-yellow-500 hover:bg-orange-500 px-8 uppercase font-bold py-3 rounded-full mt-4'>Order Now</button>
+              </div>
+            </div>
+          )
         })
       }
       </div>
@@ -105,15 +104,13 @@ const index = () => {
       <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 shadow-xl text-center px-4 md:px-40 p-10 gap-5'>{
         cheifdata.map((e, i) => {
           return (
-            <>
-              <div key={i}>
-                <div className=' flex justify-center items-center'>
-                  <Image src={e.img} alt='pic' className='cursor-pointer' />
-                </div>
-                <p className='font-semibold mt-3'>{e.name}</p>
-                <span className='font-normal'>{e.type}</span>
+            <div key={i}>
+              <div className=' flex justify-center items-center'>
+                <Image src={e.img} alt='pic' className='cursor-pointer' />
               </div>
-            </>
+              <p className='font-semibold mt-3'>{e.name}</p>
+              <span className='font-normal'>{e.type}</span>
+            </div>
           )
         })
       }
