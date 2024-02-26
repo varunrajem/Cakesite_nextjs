@@ -1,13 +1,17 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { useState } from 'react'
 import logo from '../public/logo.png'
-import { HiOutlineShoppingBag } from "react-icons/hi";
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { useRouter } from 'next/router';
 
-const Navbar = () => {
 
+const Navbar = () => {
   const router = useRouter()
+  console.log(router.asPath)
+  const [isopen, setisOpen] = useState(false)
+
 
   const Llink = [
     {
@@ -50,25 +54,43 @@ const Navbar = () => {
 
   return (
     <>
-      <div className='grid grid-cols-3 pt-16 px-56 bg-pink-300'>
-        <div className='flex justify-between '>
+      <div className='flex justify-center items-center h-[130px] bg-pink-300 sticky top-0 z-30'>
+        <div className='md:flex justify-between gap-5 hidden px-5'>
           {Llink.map((link, i) => {
-            return <Link key={i} href={link.path} className='text-lg text-white'>{link.name}</Link>
+            return <Link key={i} href={link.path} className={router.asPath === link.path ? 'font-bold text-md text-orange-500' : 'text-lg text-white'}>{link.name}</Link>
           })}
         </div>
-        <div>
-          <Link href="/">
-            <Image src={logo} alt="logo" className="h-12 sm:h-2/4 w-full object-contain" />
-          </Link>
+        <div className='flex justify-start'>
+          <Image src={logo} alt="logo" className="h-20 w-44 object-contain" />
         </div>
-        <div className='flex justify-between'>
+        <div className='md:flex justify-between gap-5 hidden px-5'>
           {Rlink.map((link, i) => {
-            return <Link key={i} href={link.path} className={router.asPath === link.path ? 'capitalize text-orange-500' : 'capitalize text-white'}>{link.name}</Link>
+            return <Link key={i} href={link.path} className={router.asPath === link.path ? 'font-bold text-md text-orange-500' : 'text-lg text-white'}>{link.name}</Link>
           })}
-          <div>
-            <HiOutlineShoppingBag size={32} className='text-white' />
-          </div>
         </div>
+        <div
+          className={`md:hidden hover:cursor-pointer z-20 text-4xl`}
+          onClick={() => setisOpen(!isopen)}
+        >
+          {isopen ? <AiOutlineClose /> : <AiOutlineMenu />}
+        </div>
+        {isopen &&
+          <div onClick={() => setisOpen(!isopen)} className='absolute top-[144px] bg-black/75 left-0 w-full h-screen z-10'>
+          </div>
+        }
+        {isopen ?
+          <div className='absolute top-[144px] left-0 w-2/3 h-screen z-20'>
+            <ul className='bg-blue-100 shadow-xl h-full'>
+              {Llink.map((e, i) => {
+                return (
+                  <div key={i} className='flex justify-start items-center px-3 py-1 gap-3'>
+                    <li><a onClick={() => setisOpen(!isopen)}>{e.name}</a></li>
+                  </div>
+                )
+              })}
+
+            </ul></div> : ''
+        }
       </div>
 
     </>
