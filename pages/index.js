@@ -10,13 +10,11 @@ import { Data } from '../constant/index'
 import Image from 'next/image'
 import welcomeimg from '../public/welcomeimage.jpg'
 import { Cheifdata } from '../constant/teams'
-import { useRouter } from 'next/router';
-
+import Link from 'next/link'
 
 
 
 const index = () => {
-  const router = useRouter()
 
   return (
     <>
@@ -49,9 +47,9 @@ const index = () => {
             <p>Donec in metus lectus. Integer vulputate porta elit, fringilla mollis mag luctus vel. Interdum et malesuada fames ac ante ipsum primis in fauci. Pellentesque in aliquam enim, quis lobortis arcu. Curabitur quis ultrices est. Donec dapibus felis vel venenatis consequat. Sed feugiat diam consequat velit un fermentum turpis cursus ante ipsum primis in fauci.</p>
             <h1 className='py-4'>Cras semper, neque vitae hendrerit venenatis, tortor erat faucibus justo, sed faucibus <br /> orci felis vitae risus.</h1>
           </div>
-          <div>
-            <button onClick={() => router.push('/recipe')} className='text-white bg-yellow-500 hover:bg-orange-300 px-8 uppercase font-bold py-3 rounded-full'>READ MORE</button>
-          </div>
+          <Link href={'/recipe'}>
+            <button className='text-white cursor-pointer bg-yellow-500 hover:bg-orange-300 px-8 uppercase font-bold py-3 rounded-full'>READ MORE</button>
+          </Link>
         </div>
 
       </div>
@@ -72,7 +70,7 @@ const index = () => {
             <>
               <div key={i} className='grid grid-cols-1 md:grid-cols-2 w-full p-3'>
                 <div className='w-full'>
-                  <Image src={e.cakeimg} alt='...' className='object-contain' />
+                  <Image src={e.cakeimg} alt='pic' className='object-contain' />
                 </div>
                 <div className='px-4'>
                   <p className='text-lg font-medium uppercase '>{e.title}</p>
@@ -90,7 +88,7 @@ const index = () => {
           <div className='text-center'>
             <p className='font-extrabold text-gray-700 tracking-widest text-2xl md:text-5xl pb-6'>Making your Christmas cake in <br />
               December is perfect.</p>
-            <button onClick={() => router.push('/menu')} className='text-white bg-yellow-500 hover:bg-orange-500 px-10 uppercase font-bold py-4 rounded-full'>CHECK MENU</button>
+            <Link href={'/menu'}><button className='text-white bg-yellow-500 hover:bg-orange-500 px-10 uppercase font-bold py-4 rounded-full'>CHECK MENU</button></Link>
           </div>
         </div>
       </div>
@@ -110,7 +108,7 @@ const index = () => {
             <>
               <div key={i} className=''>
                 <div className=' flex justify-center items-center'>
-                  <Image src={e.img} alt='' className='cursor-pointer' />
+                  <Image src={e.img} alt='pic' className='cursor-pointer' />
                 </div>
                 <p className='font-semibold mt-3'>{e.name}</p>
                 <span className='font-normal'>{e.type}</span>

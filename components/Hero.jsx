@@ -1,10 +1,10 @@
 import React from 'react'
 import Image from 'next/image'
 import pic from '../public/slider.jpg'
-import { useRouter } from 'next/router'
+import Link from 'next/link'
 
 const Hero = () => {
-  const router = useRouter()
+
 
   return (
     <div className='relative'>
@@ -17,7 +17,7 @@ const Hero = () => {
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </div>
           <div className='flex justify-center'>
-            <button onClick={() => router.push('/service')} className='flex justify-center items-center text-white bg-yellow-500 hover:bg-orange-400 px-10 uppercase font-bold py-4 rounded-full'>Get Started</button>
+            <Link href={'/service'}><button className='flex justify-center items-center text-white bg-yellow-500 hover:bg-orange-400 px-10 uppercase font-bold py-4 rounded-full'>Get Started</button></Link>
           </div>
         </div>
       </div>

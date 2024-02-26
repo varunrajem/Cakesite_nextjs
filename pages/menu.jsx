@@ -16,7 +16,7 @@ const menu = () => {
           return (<>
             <div key={i} className='grid grid-cols-1 md:grid-cols-2 w-full py-5'>
               <div className=''>
-                <Image src={e.cakeimg} alt='...' className='' />
+                <Image src={e.cakeimg} alt='pic' className='' />
               </div>
               <div className='px-4'>
                 <p className='text-lg font-medium uppercase'>{e.title}</p>
