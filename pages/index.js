@@ -6,10 +6,10 @@ import cake2 from '../public/Images/Cake/cakes2.jpg'
 import cake3 from '../public/Images/Cake/cakes3.jpg'
 import cake4 from '../public/Images/Cake/cakes4.jpg'
 import { RiCakeLine } from "react-icons/ri";
-import { Data } from '../constant/index'
+import { data } from '../constant/index'
 import Image from 'next/image'
 import welcomeimg from '../public/welcomeimage.jpg'
-import { Cheifdata } from '../constant/teams'
+import { cheifdata } from '../constant/teams'
 import Link from 'next/link'
 
 
@@ -65,7 +65,7 @@ const index = () => {
         </div>
       </div>
       <div className='grid grid-cols-1 md:grid-cols-2 px-8 md:px-56 py-20 gap-7 '>{
-        Data.map((e, i) => {
+        data.map((e, i) => {
           return (
             <>
               <div key={i} className='grid grid-cols-1 md:grid-cols-2 w-full p-3'>
@@ -103,10 +103,10 @@ const index = () => {
         </div>
       </div>
       <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 shadow-xl text-center px-4 md:px-40 p-10 gap-5'>{
-        Cheifdata.map((e, i) => {
+        cheifdata.map((e, i) => {
           return (
             <>
-              <div key={i} className=''>
+              <div key={i}>
                 <div className=' flex justify-center items-center'>
                   <Image src={e.img} alt='pic' className='cursor-pointer' />
                 </div>

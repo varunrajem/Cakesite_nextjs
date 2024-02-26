@@ -21,7 +21,7 @@ const Navbar = () => {
   const [isopen, setisOpen] = useState(false)
 
 
-  const Llink = [
+  const llink = [
     {
       name: 'Home',
       path: '/'
@@ -40,7 +40,7 @@ const Navbar = () => {
     },
   ]
 
-  const Rlink = [
+  const rlink = [
     {
       name: 'Recipes',
       path: '/recipe'
@@ -109,7 +109,7 @@ const Navbar = () => {
     <>
       <div className='flex justify-between sm:justify-center items-center h-[120px] bg-pink-300 sticky top-0 z-30 px-3'>
         <div className='md:flex justify-between gap-5 hidden px-5'>
-          {Llink.map((link, i) => {
+          {llink.map((link, i) => {
             return <Link key={i} href={link.path} className={router.asPath === link.path ? 'font-bold text-md text-orange-500' : 'text-lg text-white'}>{link.name}</Link>
           })}
         </div>
@@ -117,7 +117,7 @@ const Navbar = () => {
           <Image src={logo} alt="logo" className="h-20 w-44 object-contain" />
         </div>
         <div className='md:flex justify-between gap-5 hidden px-5'>
-          {Rlink.map((link, i) => {
+          {rlink.map((link, i) => {
             return <Link key={i} href={link.path} className={router.asPath === link.path ? 'font-bold text-md text-orange-500' : 'text-lg text-white'}>{link.name}</Link>
           })}
         </div>

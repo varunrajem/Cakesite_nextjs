@@ -1,5 +1,5 @@
 import React from 'react'
-import { Data } from '../constant/index'
+import { data } from '../constant/index'
 import Image from 'next/image'
 
 const menu = () => {
@@ -12,11 +12,11 @@ const menu = () => {
         </div>
       </div>
       <div className='grid grid-cols-1 md:grid-cols-2 p-2 md:px-56 py-10 md:py-20 gap-7'>{
-        Data.map((e, i) => {
+        data.map((e, i) => {
           return (<>
             <div key={i} className='grid grid-cols-1 md:grid-cols-2 w-full py-5'>
-              <div className=''>
-                <Image src={e.cakeimg} alt='pic' className='' />
+              <div>
+                <Image src={e.cakeimg} alt='pic' />
               </div>
               <div className='px-4'>
                 <p className='text-lg font-medium uppercase'>{e.title}</p>

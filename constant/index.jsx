@@ -6,7 +6,7 @@ import ourmenu5 from '../public/Images/MenuCake/ourmenu-5.jpg'
 import ourmenu6 from '../public/Images/MenuCake/ourmenu-6.jpg'
 
 
-export const Data = [
+export const data = [
   {
     cakeimg: ourmenu1,
     title: "chocolate cake",

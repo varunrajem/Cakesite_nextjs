@@ -27,7 +27,7 @@ const about = () => {
       </div>
 
       <div className='grid grid-cols-1 md:grid-cols-2 p-4 md:p-28  '>
-        <Image src={ourstory} alt='pic' className='' />
+        <Image src={ourstory} alt='pic' />
 
 
         <div className='p-4 md:px-14 space-y-8'>

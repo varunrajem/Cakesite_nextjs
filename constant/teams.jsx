@@ -3,7 +3,7 @@ import chief2 from '../public/Images/Teams/team002.jpg'
 import chief3 from '../public/Images/Teams/team003.jpg'
 import chief4 from '../public/Images/Teams/team004.jpg'
 
-export const Cheifdata = [
+export const cheifdata = [
   {
     img: chief1,
     name: "JONATHAN DOE",
